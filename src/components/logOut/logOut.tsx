@@ -6,9 +6,11 @@ import { InlineErrMsg } from "../global/inlineErrMsg";
 export const LogOut = ({
   firstName,
   setTokenState,
+  autoCloseNavMobile,
 }: {
   firstName: string;
   setTokenState: React.Dispatch<React.SetStateAction<boolean>>;
+  autoCloseNavMobile: () => void;
 }) => {
   const [errMsg, setErrMsg] = useState("");
 
@@ -17,6 +19,7 @@ export const LogOut = ({
     const res = await logOutFn({ setErrMsg });
     if (res && res.message.includes("success")) {
       setTokenState(false);
+      autoCloseNavMobile();
     }
   }
   return (

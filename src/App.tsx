@@ -61,114 +61,40 @@ function App() {
     createRoutesFromElements(
       <Route
         path="/"
-        element={
-          <Root
-            setTokenState={setTokenState}
-            tokenState={tokenState}
-          />
-        }
+        element={<Root setTokenState={setTokenState} tokenState={tokenState} />}
       >
-        <Route
-          index
-          element={<Home />}
-        />
-        <Route
-          path="/venues"
-          element={<Venues />}
-        />
-        <Route
-          path="/ticketing"
-          element={<Ticketing />}
-        />
-        <Route
-          path="/event-services"
-          element={<EventServices />}
-        />
-        <Route
-          path="/event-showcase"
-          element={<EventShowcase />}
-        />
-        <Route
-          path="/about"
-          element={<About />}
-        />
-        <Route
-          path="/blacklist"
-          element={<Blacklist />}
-        />
-        <Route
-          path="/sign-up"
-          element={<SignUp />}
-        />
+        <Route index element={<Home />} />
+        <Route path="/venues" element={<Venues />} />
+        <Route path="/ticketing" element={<Ticketing />} />
+        <Route path="/event-services" element={<EventServices />} />
+        <Route path="/event-showcase" element={<EventShowcase />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blacklist" element={<Blacklist />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route
           path="/login"
-          element={<Login />}
+          element={<Login setTokenState={setTokenState} />}
         />
         {/*others*/}
-        <Route
-          path="*"
-          element={<p>There's nothing here: 404!</p>}
-        />
-        <Route
-          path="/events/:event_id"
-          element={<DynamicEvent />}
-        />
-        <Route
-          path="/venues/:venue_id"
-          element={<DynamicVenue />}
-        />
-        <Route
-          path="/create-event"
-          element={<CreateAnEvent />}
-        />
-        <Route
-          path="/profile"
-          element={<Profile />}
-        />
-        <Route
-          path="/profile/my-listings"
-          element={<MyListings />}
-        />
-        <Route
-          path="/profile/post"
-          element={<ProfilePost />}
-        />
-        <Route
-          path="/profile/media"
-          element={<ProfileMedia />}
-        />
-        <Route
-          path="/profile/messages"
-          element={<ProfileMessages />}
-        />
-        <Route
-          path="/short-videos"
-          element={<ShortVideos />}
-        />
+        <Route path="*" element={<p>There's nothing here: 404!</p>} />
+        <Route path="/events/:event_id" element={<DynamicEvent />} />
+        <Route path="/venues/:venue_id" element={<DynamicVenue />} />
+        <Route path="/create-event" element={<CreateAnEvent />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/my-listings" element={<MyListings />} />
+        <Route path="/profile/post" element={<ProfilePost />} />
+        <Route path="/profile/media" element={<ProfileMedia />} />
+        <Route path="/profile/messages" element={<ProfileMessages />} />
+        <Route path="/short-videos" element={<ShortVideos />} />
         <Route
           path="/short-videos/:video_id"
           element={<DynamicShortVideos />}
         />
-        <Route
-          path="/upload-short-videos"
-          element={<ShortVideoUploadForm />}
-        />
-        <Route
-          path="/stories/:story_id"
-          element={<DynamicStories />}
-        />
-        <Route
-          path="/groups"
-          element={<Groups />}
-        />
-        <Route
-          path="/groups/create"
-          element={<CreateGroup />}
-        />
-        <Route
-          path="/groups/:group_id"
-          element={<DyanmicGroups />}
-        />
+        <Route path="/upload-short-videos" element={<ShortVideoUploadForm />} />
+        <Route path="/stories/:story_id" element={<DynamicStories />} />
+        <Route path="/groups" element={<Groups />} />
+        <Route path="/groups/create" element={<CreateGroup />} />
+        <Route path="/groups/:group_id" element={<DyanmicGroups />} />
         <Route
           path="/event-services/:eservice_id"
           element={<DynamicServiceProvides />}
@@ -177,10 +103,7 @@ function App() {
           path="/chat/:recipient_id/:first_name"
           element={<DynamicChatWrapper />}
         />
-        <Route
-          path="/e-service/create-service"
-          element={<CreateService />}
-        />
+        <Route path="/e-service/create-service" element={<CreateService />} />
         {/* <Route
           path="/events/q/:category_view"
           element={<ViewByCategory />}

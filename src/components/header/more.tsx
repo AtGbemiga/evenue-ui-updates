@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/moreSZR.module.css";
 
-export const MoreContent = () => {
+export const MoreContent = ({ onClick }: { onClick: () => void }) => {
   const [displayExtras, setDisplayExtras] = useState(false);
 
   function handleTrueDisplay(
@@ -33,8 +33,12 @@ export const MoreContent = () => {
           onMouseEnter={handleTrueDisplay}
           onMouseLeave={handleFalseDisplay}
         >
-          <Link to="/short-videos">Short videos</Link>{" "}
-          <Link to="/groups">Groups</Link>
+          <Link to="/short-videos" onClick={onClick}>
+            Short videos
+          </Link>{" "}
+          <Link to="/groups" onClick={onClick}>
+            Groups
+          </Link>
         </div>
       )}
     </div>

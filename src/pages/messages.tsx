@@ -59,10 +59,7 @@ export const ProfileMessages = () => {
 
   const inboxResContent = resInbox?.finalResult[0].map((inbox) => (
     <div>
-      <Link
-        to={`/chat/${inbox.id}/${firstName}`}
-        key={inbox.id}
-      >
+      <Link to={`/chat/${inbox.id}/${firstName}`} key={inbox.id}>
         {inbox.message}
       </Link>
       <hr />
@@ -93,21 +90,18 @@ export const ProfileMessages = () => {
                 </div>
                 <div>
                   <div>
-                    <img
-                      src={user.img}
-                      alt="profile"
-                    />
+                    <img src={user.img} alt="profile" />
                   </div>
                   <div>
                     <p>{user.first_name + " " + user.last_name}</p>
                     <p>{user.email}</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <img
                       src="/home/bell.svg"
                       alt=""
                     />
-                  </div>
+                  </div> */}
                 </div>
               </section>
 

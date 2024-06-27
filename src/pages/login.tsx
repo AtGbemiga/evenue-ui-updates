@@ -1,7 +1,11 @@
 import { Helmet } from "react-helmet";
 import { Form } from "../components/logIn/form";
 
-const Login = () => {
+export type TokenStateProps = {
+  setTokenState: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Login = ({ setTokenState }: TokenStateProps) => {
   return (
     <div>
       <Helmet>
@@ -9,7 +13,7 @@ const Login = () => {
         <title>Login</title>
         <link rel="canonical" href="https://evenue.ng/login" />
       </Helmet>
-      <Form />
+      <Form setTokenState={setTokenState} />
     </div>
   );
 };

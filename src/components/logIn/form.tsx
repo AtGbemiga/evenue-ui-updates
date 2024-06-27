@@ -5,8 +5,9 @@ import styles from "../global/styles/signup&loginG9D.module.css";
 import { LogIn } from "../../typesAndInterfaces/users/logIn";
 import { useNavigate, useLocation } from "react-router-dom";
 import { MaxInputLength } from "../global/maxInputLength";
+import { TokenStateProps } from "../../pages/login";
 
-export const Form = () => {
+export const Form = ({ setTokenState }: TokenStateProps) => {
   const [formDetails, setFormDetails] = useState<LogIn>({
     email: "",
     password: "",
@@ -30,6 +31,7 @@ export const Form = () => {
           if (location.state?.from) {
             navigate(location.state.from);
           } else {
+            setTokenState(true);
             navigate("/profile");
           }
         }
