@@ -26,8 +26,6 @@ function DynamicChat({
   const [resProfile, setResProfile] = useState<ProfileRes>();
   const [errMsg, setErrMsg] = useState("");
 
-  console.log({ recipient_id });
-
   const websocket = new WebSocket(`ws://localhost:4192`);
 
   useEffect(() => {
@@ -54,9 +52,8 @@ function DynamicChat({
 
   useEffect(() => {
     websocket.onmessage = function (event) {
-      console.log({ event });
       const message = JSON.parse(event.data);
-      console.log({ message });
+
       setMessages((prevMessages) => [...prevMessages, message]);
     };
     setWs(websocket);

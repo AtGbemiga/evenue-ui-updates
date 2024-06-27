@@ -4,7 +4,6 @@ import styles from "./styles/viewByCategoryDKI.module.css";
 
 export const ViewByCategoryV = () => {
   const { category_identifier } = useParams();
-  console.log({ category_identifier });
 
   if (!category_identifier) {
     throw new Error("pass category view");

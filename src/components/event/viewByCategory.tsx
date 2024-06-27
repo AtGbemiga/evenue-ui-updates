@@ -11,7 +11,6 @@ export const ViewByCategory = () => {
   const [events, setEvents] = useState<Response>();
   const [errMsg, setErrMsg] = useState("");
   const { category_view } = useParams();
-  console.log({ category_view });
 
   useEffect(() => {
     getLimitedInfoFn({ categoryIdentifier: category_view, setErrMsg })
@@ -23,10 +22,7 @@ export const ViewByCategory = () => {
   }, []);
 
   const content = events?.result.map((event) => (
-    <LimitedInfoCard
-      key={event.event_id}
-      {...event}
-    />
+    <LimitedInfoCard key={event.event_id} {...event} />
   ));
 
   // problem of correct key attr here
@@ -35,10 +31,7 @@ export const ViewByCategory = () => {
   //   ));
 
   return (
-    <div
-      className={styles.containerDE7}
-      style={{ padding: "2rem" }}
-    >
+    <div className={styles.containerDE7} style={{ padding: "2rem" }}>
       <div className={styles.header}>
         {/* <h1>Blacklisted Events</h1> */}
         {/* {content && content.length > 6 && (

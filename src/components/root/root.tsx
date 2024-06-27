@@ -19,7 +19,6 @@ const Root = ({
   const location = useLocation();
   const token = Cookies.get("token");
   const [errMsg, setErrMsg] = useState("");
-  console.log(token);
 
   // nav display logic
   const [isScreeMobile, setIsScreenMobile] = useState(
@@ -42,8 +41,6 @@ const Root = ({
 
   function autoCloseNavMobile() {
     if (isScreeMobile) {
-      console.log("cliked on else");
-
       setShowMobileNavContent(false);
     }
   }

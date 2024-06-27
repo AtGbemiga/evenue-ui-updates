@@ -38,14 +38,12 @@ export const ProfileMessages = () => {
             recipient_id = res?.finalResult[0].find(
               (recipient) => recipient.fk_recipient_id
             )?.fk_recipient_id;
-            console.log({ recipient_id });
+
             if (recipient_id) {
-              console.log({ recipient_id });
               authWorkerFn({
                 userId: recipient_id,
                 setErrMsg,
               }).then((res) => {
-                console.log({ res });
                 setRecipientName(res);
               });
             }
@@ -55,7 +53,6 @@ export const ProfileMessages = () => {
   }, []);
 
   const firstName = recipientName?.result[0].first_name;
-  console.log({ firstName });
 
   const inboxResContent = resInbox?.finalResult[0].map((inbox) => (
     <div>

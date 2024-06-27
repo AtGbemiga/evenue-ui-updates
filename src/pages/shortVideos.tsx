@@ -30,8 +30,6 @@ export const ShortVideos = () => {
 
   function handleNavigate2PostVideo() {
     if (!token) {
-      console.log("login needed");
-
       setShowLoginErr(true);
       setTimeout(() => {
         setShowLoginErr(false);

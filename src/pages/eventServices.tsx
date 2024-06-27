@@ -49,7 +49,6 @@ const EventServices = () => {
         category: formDetails.category ?? "",
         setErrMsg,
       });
-      console.log({ res });
 
       setEventServices(res);
       setErrMsg("");
@@ -91,8 +90,6 @@ const EventServices = () => {
 
   function handleCreateService(e: React.MouseEvent<HTMLButtonElement>) {
     if (!token) {
-      console.log("login needed");
-
       setShowLoginErr(true);
       setTimeout(() => {
         setShowLoginErr(false);

@@ -33,7 +33,6 @@ export const ProfileMedia = () => {
   }
 
   const userImg = profileRes?.profile.find((user) => user.img)?.img;
-  // console.log({ userImg });
 
   const userFirstName = profileRes?.profile.find(
     (user) => user.first_name

@@ -35,7 +35,6 @@ const Venues = () => {
         rating: formDetails.rating ?? "",
         setErrMsg,
       });
-      console.log({ res });
 
       setVenues(res);
       setErrMsg("");

@@ -23,8 +23,6 @@ export const AddPosts = ({ group_id }: { group_id: string }) => {
     event.preventDefault();
 
     if (!token) {
-      console.log("login needed");
-
       setShowLoginErr(true);
       setTimeout(() => {
         setShowLoginErr(false);

@@ -80,8 +80,6 @@ export const ProfileEdit = ({
     try {
       const res = await updateProfileFn({ formDataBody, setErrMsg });
 
-      console.log({ res });
-
       // reset the form
       setFormDetails({
         first_name: "",
@@ -103,8 +101,6 @@ export const ProfileEdit = ({
       });
       setAbout_your_organisation("");
       setServices_your_organization_provides("");
-
-      console.log({ res });
 
       // navigate to a success page
     } catch (error) {
@@ -136,10 +132,7 @@ export const ProfileEdit = ({
         <h4>My Profile</h4>
       </div>
       {/*form should always send values for first_name and last_name*/}
-      <form
-        onSubmit={handleSubmit}
-        className={stylesForm.containerBI1}
-      >
+      <form onSubmit={handleSubmit} className={stylesForm.containerBI1}>
         <section className={stylesForm.flexWrapper}>
           <div>
             <label htmlFor="first_name">First name</label>

@@ -14,8 +14,6 @@ export const AddCommentForm = ({
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  console.log({ group_post_id });
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -36,10 +34,7 @@ export const AddCommentForm = ({
   }
   return (
     <div>
-      <form
-        onSubmit={handleSubmit}
-        className={styles.formCT6}
-      >
+      <form onSubmit={handleSubmit} className={styles.formCT6}>
         <label htmlFor="comment"></label>
         <input
           type="text"

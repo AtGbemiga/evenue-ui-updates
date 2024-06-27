@@ -20,7 +20,6 @@ export const ShortVideoUploadForm = () => {
 
   useEffect(() => {
     if (!token) {
-      console.log("login needed");
       navigate("/login");
     }
   }, [token, navigate]);
@@ -64,10 +63,7 @@ export const ShortVideoUploadForm = () => {
 
   return (
     <>
-      <form
-        onSubmit={handleSubmit}
-        className={styles.form9XW}
-      >
+      <form onSubmit={handleSubmit} className={styles.form9XW}>
         <h1>Upload Short Video</h1>
         <div>
           <label htmlFor="video"></label>

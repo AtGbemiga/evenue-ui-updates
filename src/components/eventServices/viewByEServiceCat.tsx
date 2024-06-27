@@ -8,7 +8,6 @@ import LimitedInfoCard from "./limitedInfoCard";
 
 export const ViewByEServiceCat = () => {
   const { category_identifier } = useParams();
-  console.log({ category_identifier });
 
   if (!category_identifier) {
     throw new Error("pass category view");
@@ -30,12 +29,9 @@ export const ViewByEServiceCat = () => {
       .catch((err) => {});
   }, []);
 
-  const content = eventServices?.result.slice(0, 15).map((event) => (
-    <LimitedInfoCard
-      key={event.id}
-      {...event}
-    />
-  ));
+  const content = eventServices?.result
+    .slice(0, 15)
+    .map((event) => <LimitedInfoCard key={event.id} {...event} />);
 
   return (
     <div className={styles.upcomingLL2}>
