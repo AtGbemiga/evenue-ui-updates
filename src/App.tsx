@@ -47,6 +47,8 @@ import { EServiceCategoryFullList } from "./components/eventServices/getCatBySer
 import { DynamicReviews } from "./pages/dynamicReviews";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
+import { ForgotPassword } from "./components/logIn/forgotPassword";
+import { EnterOTP } from "./components/logIn/enterOTP";
 
 function App() {
   const [tokenState, setTokenState] = useState(
@@ -141,6 +143,8 @@ function App() {
           path="/reviews/:service_id/:business_name"
           element={<DynamicReviews />}
         />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/enter-otp" element={<EnterOTP />} />
       </Route>
     )
   );
