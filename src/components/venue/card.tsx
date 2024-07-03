@@ -5,6 +5,7 @@ import { VenueFullInfo } from "../../typesAndInterfaces/venues/getVenue";
 import styles from "../event/styles/card.module.css";
 import { Share } from "../global/share";
 import { PopUp } from "../payment/popUp";
+import { baseURL } from "../../lib/global/urls";
 
 export const Card = (props: VenueFullInfo) => {
   const [showShare, setShowShare] = useState(false);
