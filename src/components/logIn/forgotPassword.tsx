@@ -22,7 +22,7 @@ export const ForgotPassword = () => {
   }
   return (
     <div className={styles.forgotPw0}>
-      {errMsg && <p>{errMsg}</p>}
+      {errMsg && <p className={styles.forgotPw0ErrMsg}>{errMsg}</p>}
       <h2>Enter your email</h2>
       <form onSubmit={handleSubmit}>
         <input

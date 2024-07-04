@@ -11,3 +11,7 @@
 .forgotPw0 button {
   cursor: pointer;
 }
+
+.forgotPw0ErrMsg {
+  color: red;
+}

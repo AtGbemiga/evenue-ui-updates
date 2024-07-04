@@ -49,6 +49,7 @@ import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { ForgotPassword } from "./components/logIn/forgotPassword";
 import { EnterOTP } from "./components/logIn/enterOTP";
+import { ChangePasswordLoggedOut } from "./components/logIn/changePasswordLoggedOut";
 
 function App() {
   const [tokenState, setTokenState] = useState(
@@ -145,6 +146,10 @@ function App() {
         />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/enter-otp" element={<EnterOTP />} />
+        <Route
+          path="/changed-pw-logged-out"
+          element={<ChangePasswordLoggedOut />}
+        />
       </Route>
     )
   );
