@@ -30,65 +30,32 @@ const Footer = () => {
         <p>
           <Link to="/privacy">Privacy</Link>
         </p>
-        <p>
-          <Link to="/about">About</Link>
-        </p>
-        <p>
-          <Link to="/contact">Contact</Link>
-        </p>
-        <p>
-          <Link to="/terms">Terms</Link>
-        </p>
-        <p>
-          <Link to="/privacy">Privacy</Link>
-        </p>
-        <p>
-          <Link to="/privacy">Privacy</Link>
-        </p>
       </div>
       <div>
-        <p>
+        {/* <p>
           <Link to="/contact">Contact</Link>
         </p>
         <p>
           <Link to="/terms">Terms</Link>
-        </p>
-        <p>
-          <Link to="/privacy">Privacy</Link>
-        </p>
-        <p>
-          <Link to="/privacy">Privacy</Link>
-        </p>
+        </p> */}
       </div>
       <div>
         <h6>Follow</h6>
         <div>
           <Link to="/contact">
-            <img
-              src="/home/ic_baseline-facebook.svg"
-              alt="facebook"
-            />
+            <img src="/home/ic_baseline-facebook.svg" alt="facebook" />
           </Link>
 
           <Link to="/contact">
-            <img
-              src="/home/Vector.svg"
-              alt="ig"
-            />
+            <img src="/home/Vector.svg" alt="ig" />
           </Link>
 
           <Link to="/contact">
-            <img
-              src="/home/mdi_linkedin.svg"
-              alt="linkedin"
-            />
+            <img src="/home/mdi_linkedin.svg" alt="linkedin" />
           </Link>
 
           <Link to="/contact">
-            <img
-              src="/home/ph_x-fill.svg"
-              alt="x"
-            />
+            <img src="/home/ph_x-fill.svg" alt="x" />
           </Link>
         </div>
       </div>
