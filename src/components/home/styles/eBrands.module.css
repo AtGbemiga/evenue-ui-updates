@@ -39,6 +39,12 @@
   }
 }
 
+.list .slide_track {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: calc(250px * 28);
+}
+
 .list::before,
 .list::after {
   background: linear-gradient(
@@ -64,11 +70,11 @@
   top: 0;
 }
 
-.list .slide_track {
+/* .list .slide_track {
   animation: scroll 40s linear infinite;
   display: flex;
   width: calc(250px * 14);
-}
+} */
 
 .list .slide {
   height: 15rem;
