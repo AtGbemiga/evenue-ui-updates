@@ -85,6 +85,10 @@ export const Profile = () => {
                     phone_number={user.phone_number ?? ""}
                     country_code={user.country_code ?? "234"}
                     email={user.email}
+                    profileRes={profileRes}
+                    setProfileRes={setProfileRes}
+                    getProfileFn={getProfileFn}
+                    setErrMsgs={setErrMsg}
                   />
                 </section>
               ) : (

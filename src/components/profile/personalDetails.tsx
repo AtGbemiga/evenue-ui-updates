@@ -5,6 +5,7 @@ import { UpdateImg } from "../../typesAndInterfaces/profile/updateImg";
 import updateProfileImgFn from "../../lib/profile/updateImg";
 import { InlineErrMsg } from "../global/inlineErrMsg";
 import { InlineSuccessMsg } from "../global/inllineSuccessMsg";
+import { ProfileRes } from "../../typesAndInterfaces/profile/getProfile";
 
 type Props = {
   showProfile: boolean;
@@ -15,6 +16,14 @@ type Props = {
   phone_number: string;
   country_code: string;
   email: string;
+  profileRes: ProfileRes;
+  setProfileRes: React.Dispatch<React.SetStateAction<ProfileRes | undefined>>;
+  getProfileFn: ({
+    setErrMsg,
+  }: {
+    setErrMsg: React.Dispatch<React.SetStateAction<string>>;
+  }) => Promise<ProfileRes | undefined>;
+  setErrMsgs: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export const PersonalDetails = ({
@@ -26,6 +35,10 @@ export const PersonalDetails = ({
   phone_number,
   country_code,
   email,
+  profileRes,
+  getProfileFn,
+  setProfileRes,
+  setErrMsgs,
 }: Props) => {
   const [formDetails, setFormDetails] = useState<UpdateImg>({
     img: "",
@@ -61,6 +74,9 @@ export const PersonalDetails = ({
         setErrMsg,
       }).then((data) => {
         setSuccessMsg(data.message);
+        getProfileFn({ setErrMsg: setErrMsgs }).then((res) => {
+          res && setProfileRes(res);
+        });
         // reset the form to empty
       });
     } catch (error) {}
@@ -96,16 +112,10 @@ export const PersonalDetails = ({
         <p>{email}</p>
       </div>
       <div className={stylesDetails.imgIcon}>
-        <img
-          src="/home/Group.svg"
-          alt="icon"
-        />
+        <img src="/home/Group.svg" alt="icon" />
       </div>
       <form onSubmit={handleSubmit}>
-        <label
-          htmlFor="img"
-          hidden
-        ></label>
+        <label htmlFor="img" hidden></label>
         <input
           type="file"
           name="img"
