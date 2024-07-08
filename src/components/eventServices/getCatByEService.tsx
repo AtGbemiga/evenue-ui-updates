@@ -24,6 +24,9 @@ export const EServiceCategory = () => {
   const mkupartCount = countByCat?.result.find(
     (count) => count.total_make_up_artise
   )?.total_make_up_artise;
+  const total_photo_video_makers = countByCat?.result.find(
+    (count) => count.total_photo_video_makers
+  )?.total_photo_video_makers;
 
   return (
     <div className={styles.parent29C}>
@@ -31,7 +34,12 @@ export const EServiceCategory = () => {
         <ErrMsg errMsg={errMsg} />
       ) : (
         <>
-          <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <h2>Popular Event Services</h2>
             <Link to={`/event-services/full-list`}>See more</Link>
           </div>
@@ -57,6 +65,12 @@ export const EServiceCategory = () => {
               <div>
                 <h3>Make up Artise</h3>
                 <p>{mkupartCount} professionals</p>
+              </div>
+            </Link>
+            <Link to={`/event-services/q/total_photo_video_makers`}>
+              <div>
+                <h3>Photo Video Makers</h3>
+                <p>{total_photo_video_makers} professionals</p>
               </div>
             </Link>
           </section>

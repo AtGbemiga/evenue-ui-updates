@@ -18,6 +18,7 @@ export const ShowLocations = () => {
   const lagos = resLocations?.result.find((state) => state.lagos)?.lagos;
   const ogun = resLocations?.result.find((state) => state.ogun)?.ogun;
   const kano = resLocations?.result.find((state) => state.kano)?.kano;
+  const abia = resLocations?.result.find((state) => state.abia)?.abia;
 
   return (
     <div className={styles.parent29C}>
@@ -25,7 +26,13 @@ export const ShowLocations = () => {
         <ErrMsg errMsg={errMsg} />
       ) : (
         <>
-          <div className={styles.linkArea}>
+          <div
+            className={styles.linkArea}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <h2>Popular Event Centres Cities</h2>{" "}
             <Link to={`/event-centres/full-list`}>See more</Link>
           </div>
@@ -46,6 +53,12 @@ export const ShowLocations = () => {
               <div>
                 <h3>Kano</h3>
                 <p>{kano} venues</p>
+              </div>
+            </Link>
+            <Link to={`/venues/q/abia`}>
+              <div>
+                <h3>Abia</h3>
+                <p>{abia} venues</p>
               </div>
             </Link>
           </section>
