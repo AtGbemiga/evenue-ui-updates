@@ -12,8 +12,10 @@ export const Hero = () => {
       </div>
       <div className={styles.contentBox}>
         <p>
-          Lorem ipsum dolor sit amet consectetur. Integer augue at vitae sed
-          integer porttitor sed ultrices ornare.
+          Ready to bring your event to life? Join E-Venue and start creating
+          unforgettable experiences. Our platform provides everything you need
+          to plan, promote, and manage your event, all in one place. Get started
+          today and watch your event flourish!
         </p>
         <hr />
         <hr />

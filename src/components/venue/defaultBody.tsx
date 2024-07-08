@@ -23,10 +23,7 @@ export const DefaultBody = () => {
         <EServiceCategory />
       </section>
       <section>
-        <BlankVenue
-          identifierValue="wedding"
-          title="Popular Wedding venues"
-        />
+        <BlankVenue identifierValue="wedding" title="Popular Wedding venues" />
       </section>
       <section>
         <BlankVenue
@@ -49,7 +46,7 @@ export const DefaultBody = () => {
       <section>
         <VenueOrEventAd
           props="Find the, BEST, EVENTS, Happening Around you"
-          body="Some random words spanning two to three lines. Guess will have to find out."
+          body="Planning an event can be a daunting task, but finding the perfect venue shouldn't be. At E-Venue, we make it simple to discover, compare, and book the ideal location for any occasion."
           toAttr="events"
         />
       </section>

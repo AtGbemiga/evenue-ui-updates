@@ -112,8 +112,27 @@ const EventServices = () => {
         setFormDetails={setFormDetails}
         handleSearch={handleSearch}
       />
+      <>
+        <p
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            padding: "0 2rem",
+            rowGap: "1rem",
+          }}
+        >
+          Planning an event can be challenging, but finding the perfect venue
+          shouldn't be. At E-Venue, we make it easy to discover, compare, and
+          book the ideal location for any occasion. Our platform features a wide
+          variety of venues to suit any type of event. Whether you're hosting a
+          wedding, corporate meeting, birthday party, or concert, you'll find
+          the perfect space among our extensive listings. From intimate settings
+          to grand halls, we cater to every need and preference.
+        </p>
+      </>
       <div>
         <h3>Service Providers</h3>
+
         <div>
           <button name="btn1" onClick={handleBtnClick}>
             <img src="/home/photographers.svg" alt="photographers" />

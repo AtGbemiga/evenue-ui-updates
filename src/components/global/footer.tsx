@@ -6,12 +6,12 @@ const Footer = () => {
     <div className={styles.footerMR6}>
       <div>
         <h6>About</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Ullamcorper bibendum diam
-          sapien faucibus. Dolor in nibh malesuada pharetra aenean eu rhoncus.
-          Non tortor sagittis metus vitae nunc. Varius congue faucibus lacus
-          pharetra nisl risus. Bibendum integer fringilla id ante fusce varius
-          eget.
+        <p style={{ color: "#f8f8f8" }}>
+          Welcome to E-Venue, your ultimate platform for connecting people with
+          perfect event venues and unforgettable experiences. Whether you're
+          looking to list your event center, book a venue for your special
+          occasion, promote your upcoming event, or purchase tickets for an
+          event, we have you covered.
         </p>
         <Link to="/about">Learn more</Link> {/* placeholder to attribute */}
       </div>

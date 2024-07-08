@@ -38,7 +38,9 @@ const Venues = () => {
 
       setVenues(res);
       setErrMsg("");
-    } catch (error) {}
+    } catch (error: any) {
+      setErrMsg(error.error);
+    }
   }
 
   const content = venues?.result?.map((venue) => (
