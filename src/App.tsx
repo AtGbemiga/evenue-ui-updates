@@ -57,6 +57,7 @@ import { ShortVideoUploadForm } from "./pages/shortVideoUpload";
 import SignUp from "./pages/signUp";
 import Ticketing from "./pages/ticketing";
 import Venues from "./pages/venues";
+import { HomeAdvert } from "./components/admin/HomeAdvert";
 
 function App() {
   const [tokenState, setTokenState] = useState(
@@ -177,6 +178,7 @@ function App() {
           path="/admin/event-service-list"
           element={<GroupPostCommentListInAdmin />}
         />
+        <Route path="/admin/home-advert" element={<HomeAdvert />} />
       </Route>
     )
   );

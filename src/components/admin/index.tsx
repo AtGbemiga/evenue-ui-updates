@@ -52,6 +52,9 @@ export const AdminIndex = () => {
             Delete group post comment
           </Link>
         </li>
+        <li>
+          <Link to={`/admin/home-advert`}>Home page advert</Link>
+        </li>
       </ol>
     </div>
   );
