@@ -71,10 +71,7 @@ export const MyListings = () => {
 
   // map eventRes
   const eventResMapped = eventRes?.finalResult[0].map((event) => (
-    <LimitedInfoCard
-      key={event.event_id}
-      {...event}
-    />
+    <LimitedInfoCard key={event.event_id} {...event} />
   ));
 
   // Assuming MLEvents accepts a prop named 'total'
@@ -95,10 +92,7 @@ export const MyListings = () => {
   }
 
   const venuesResMapped = venueRes?.finalResult[0].map((venue) => (
-    <LimitedInfoCard
-      key={venue.event_id}
-      {...venue}
-    />
+    <LimitedInfoCard key={venue.event_id} {...venue} />
   ));
 
   const venuesTotal = venueRes?.finalResult[1].reduce(
@@ -130,10 +124,7 @@ export const MyListings = () => {
   }
 
   const searchContent = searchRes?.result.map((event) => (
-    <LimitedInfoCard
-      key={event.event_id}
-      {...event}
-    />
+    <LimitedInfoCard key={event.event_id} {...event} />
   ));
   // end of search logic
 
@@ -156,10 +147,7 @@ export const MyListings = () => {
   }
 
   const venuesSearchContent = venueSearchRes?.result.map((event) => (
-    <LimitedInfoCard
-      key={event.event_id}
-      {...event}
-    />
+    <LimitedInfoCard key={event.event_id} {...event} />
   ));
 
   const token = Cookies.get("token");
@@ -189,21 +177,18 @@ export const MyListings = () => {
                 </div>
                 <div>
                   <div>
-                    <img
-                      src={user.img}
-                      alt="profile"
-                    />
+                    <img src={user.img} alt="profile" />
                   </div>
                   <div>
                     <p>{user.first_name + " " + user.last_name}</p>
                     <p>{user.email}</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <img
                       src="/home/bell.svg"
                       alt="bell"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </section>
               {showEvent ? (

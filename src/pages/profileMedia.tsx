@@ -33,7 +33,6 @@ export const ProfileMedia = () => {
   }
 
   const userImg = profileRes?.profile.find((user) => user.img)?.img;
-  // console.log({ userImg });
 
   const userFirstName = profileRes?.profile.find(
     (user) => user.first_name
@@ -69,21 +68,18 @@ export const ProfileMedia = () => {
                 </div>
                 <div>
                   <div>
-                    <img
-                      src={user.img}
-                      alt="profile"
-                    />
+                    <img src={user.img} alt="profile" />
                   </div>
                   <div>
                     <p>{user.first_name + " " + user.last_name}</p>
                     <p>{user.email}</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <img
                       src="/home/bell.svg"
                       alt=""
                     />
-                  </div>
+                  </div> */}
                 </div>
               </section>
 
@@ -91,10 +87,7 @@ export const ProfileMedia = () => {
                 <div>
                   <div>
                     <button onClick={() => setShowUpload(true)}>
-                      <img
-                        src="/home/zondicons_add-outline.svg"
-                        alt="plus"
-                      />
+                      <img src="/home/zondicons_add-outline.svg" alt="plus" />
                     </button>
                   </div>
                   <div>What's going on today?</div>

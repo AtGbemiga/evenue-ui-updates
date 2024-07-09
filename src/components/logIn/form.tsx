@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { handleInputChange } from "../global/handleInputChange";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import globalStyles from "../../components/global/styles/authForms.module.css";
 import loginFn from "../../lib/users/login";
-import styles from "../global/styles/signup&loginG9D.module.css";
+import { TokenStateProps } from "../../pages/login";
 import { LogIn } from "../../typesAndInterfaces/users/logIn";
-import { useNavigate, useLocation } from "react-router-dom";
+import { handleInputChange } from "../global/handleInputChange";
 import { MaxInputLength } from "../global/maxInputLength";
+import styles from "../global/styles/signup&loginG9D.module.css";
 
-export const Form = () => {
+export const Form = ({ setTokenState }: TokenStateProps) => {
   const [formDetails, setFormDetails] = useState<LogIn>({
     email: "",
     password: "",
@@ -30,6 +32,7 @@ export const Form = () => {
           if (location.state?.from) {
             navigate(location.state.from);
           } else {
+            setTokenState(true);
             navigate("/profile");
           }
         }
@@ -82,6 +85,14 @@ export const Form = () => {
         </div>
         <button>Log In</button>
       </form>
+      <section className={globalStyles.gafsection}>
+        <div>
+          <Link to="/forgotPassword">Forgot password?</Link>
+        </div>
+        <div>
+          Don't have an account? <Link to="/sign-up">Sign up</Link>
+        </div>
+      </section>
     </div>
   );
 };

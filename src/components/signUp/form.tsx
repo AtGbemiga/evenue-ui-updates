@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { handleInputChange } from "../global/handleInputChange";
-import { SignUp } from "../../typesAndInterfaces/users/signUp";
+import { Link, useNavigate } from "react-router-dom";
+import globalStyles from "../../components/global/styles/authForms.module.css";
 import signUpFn from "../../lib/users/signUp";
-import styles from "../global/styles/signup&loginG9D.module.css";
+import { SignUp } from "../../typesAndInterfaces/users/signUp";
+import { handleInputChange } from "../global/handleInputChange";
 import { MaxInputLength } from "../global/maxInputLength";
-import { useNavigate } from "react-router-dom";
+import styles from "../global/styles/signup&loginG9D.module.css";
 
 export const Form = () => {
   const [formDetails, setFormDetails] = useState<SignUp>({
@@ -109,6 +110,11 @@ export const Form = () => {
         </div>
         <button>Sign Up</button>
       </form>
+      <section className={globalStyles.gafsection}>
+        <div>
+          Already have an account? <Link to="/login">Log in</Link>
+        </div>
+      </section>
     </div>
   );
 };

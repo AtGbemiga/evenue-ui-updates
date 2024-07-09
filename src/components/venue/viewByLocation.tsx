@@ -4,7 +4,6 @@ import styles from "./styles/viewByCategoryDKI.module.css";
 
 export const ViewByLocation = () => {
   const { location_identifier } = useParams();
-  console.log({ location_identifier });
 
   if (!location_identifier) {
     throw new Error("pass category view");

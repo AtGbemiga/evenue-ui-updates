@@ -8,18 +8,22 @@ export const Hero = () => {
           <span>Blacklisted</span> Venue, Centers and People
         </h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur. Vivamus etiam egestas aliquet
-          eget elementum vel ullamcorper mauris. Eget pretium urna a id sed
-          nunc. Elementum pulvinar enim donec aliquam aliquam auctor mattis
-          vitae tristique. Elit potenti tellus adipiscing scelerisque sed eu ac
-          auctor.
+          At E-Venues, we are committed to providing a safe, reliable, and
+          high-quality experience for all our users. To maintain the integrity
+          and trustworthiness of our platform, we have established a blacklist
+          to identify venues, centers, and individuals who have violated our
+          terms of service or demonstrated unacceptable behavior. We strive to
+          be transparent and fair in our blacklisting process. Affected parties
+          will be notified and given an opportunity to respond to any
+          allegations. We conduct thorough investigations to ensure that our
+          decisions are based on accurate and reliable information. By
+          blacklisting venues, centers, and individuals that fail to meet our
+          standards, we protect our community and maintain our quality and
+          integrity.
         </p>
       </div>
       <div>
-        <img
-          src="/home/blacklist_1-removebg-preview 1.svg"
-          alt="blacklist"
-        />
+        <img src="/home/blacklist_1-removebg-preview 1.svg" alt="blacklist" />
       </div>
     </div>
   );

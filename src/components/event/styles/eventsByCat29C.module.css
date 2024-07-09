@@ -8,8 +8,9 @@
 }
 
 .parent29C > div:first-child a {
-  /* text-decoration: none; */
+  text-decoration: none;
   color: #000000;
+  padding-right: 2rem;
 }
 
 .container29C {
@@ -104,5 +105,8 @@
     column-gap: 1.5rem;
     padding: 0 2rem;
     align-items: center;
+  }
+  .parent29C > div:first-child a {
+    padding-right: 0;
   }
 }

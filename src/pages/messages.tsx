@@ -38,14 +38,12 @@ export const ProfileMessages = () => {
             recipient_id = res?.finalResult[0].find(
               (recipient) => recipient.fk_recipient_id
             )?.fk_recipient_id;
-            console.log({ recipient_id });
+
             if (recipient_id) {
-              console.log({ recipient_id });
               authWorkerFn({
                 userId: recipient_id,
                 setErrMsg,
               }).then((res) => {
-                console.log({ res });
                 setRecipientName(res);
               });
             }
@@ -55,14 +53,10 @@ export const ProfileMessages = () => {
   }, []);
 
   const firstName = recipientName?.result[0].first_name;
-  console.log({ firstName });
 
   const inboxResContent = resInbox?.finalResult[0].map((inbox) => (
     <div>
-      <Link
-        to={`/chat/${inbox.id}/${firstName}`}
-        key={inbox.id}
-      >
+      <Link to={`/chat/${inbox.id}/${firstName}`} key={inbox.id}>
         {inbox.message}
       </Link>
       <hr />
@@ -93,21 +87,18 @@ export const ProfileMessages = () => {
                 </div>
                 <div>
                   <div>
-                    <img
-                      src={user.img}
-                      alt="profile"
-                    />
+                    <img src={user.img} alt="profile" />
                   </div>
                   <div>
                     <p>{user.first_name + " " + user.last_name}</p>
                     <p>{user.email}</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <img
                       src="/home/bell.svg"
                       alt=""
                     />
-                  </div>
+                  </div> */}
                 </div>
               </section>
 

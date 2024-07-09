@@ -11,6 +11,7 @@ import { PopUp } from "../payment/popUp";
 import styles from "./styles/card.module.css";
 import DOMPurify from "dompurify";
 import parse from "html-react-parser";
+import { baseURL } from "../../lib/global/urls";
 
 // Note: class 'oESFI' is only for OneEventServiceFUInfo type
 
@@ -34,8 +35,6 @@ export const Card = (props: Event | OneEventServiceFUInfo) => {
 
     const handleMsg = () => {
       if (!token) {
-        console.log("login needed");
-
         setShowLoginErr(true);
         setTimeout(() => {
           setShowLoginErr(false);

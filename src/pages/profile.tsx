@@ -63,21 +63,15 @@ export const Profile = () => {
                 </div>
                 <div>
                   <div>
-                    <img
-                      src={user.img}
-                      alt="profile"
-                    />
+                    <img src={user.img} alt="profile" />
                   </div>
                   <div>
                     <p>{user.first_name + " " + user.last_name}</p>
                     <p>{user.email}</p>
                   </div>
-                  <div>
-                    <img
-                      src="/home/bell.svg"
-                      alt=""
-                    />
-                  </div>
+                  {/* <div>
+                    <img src="/home/bell.svg" alt="" />
+                  </div> */}
                 </div>
               </section>
               {showProfile ? (
@@ -91,6 +85,10 @@ export const Profile = () => {
                     phone_number={user.phone_number ?? ""}
                     country_code={user.country_code ?? "234"}
                     email={user.email}
+                    profileRes={profileRes}
+                    setProfileRes={setProfileRes}
+                    getProfileFn={getProfileFn}
+                    setErrMsgs={setErrMsg}
                   />
                 </section>
               ) : (

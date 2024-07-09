@@ -20,7 +20,6 @@ export const PostCard = (props: NewProps) => {
     const id = setTimeout(async () => {
       await updatePostViewsFn({ group_post_id });
     }, 5000);
-    console.log("call made");
 
     // Store the timer ID in state
     setTimerId(id);
@@ -30,7 +29,6 @@ export const PostCard = (props: NewProps) => {
     // If the mouse leaves before 5 seconds, clear the timer
     if (timerId !== null) {
       clearTimeout(timerId);
-      console.log("call cancelled");
 
       // Reset the timer ID
       setTimerId(null);
@@ -124,10 +122,7 @@ export const PostCard = (props: NewProps) => {
           {filteredComments.map(
             (comment) =>
               comment?.comment && (
-                <div
-                  className={styles.comment}
-                  key={comment.comment_id}
-                >
+                <div className={styles.comment} key={comment.comment_id}>
                   {comment.commentator_img && (
                     <div>
                       <img

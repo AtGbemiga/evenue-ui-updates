@@ -7,7 +7,6 @@ import styles from "../home/styles/upcomingLL2.module.css";
 
 export const ViewByAdminEventCategory = () => {
   const { category_identifier } = useParams();
-  console.log({ category_identifier });
 
   if (!category_identifier) {
     throw new Error("pass category view");
@@ -28,12 +27,9 @@ export const ViewByAdminEventCategory = () => {
       .catch((err) => {});
   }, []);
 
-  const content = events?.result.slice(0, 6).map((event) => (
-    <LimitedInfoCard
-      key={event.event_id}
-      {...event}
-    />
-  ));
+  const content = events?.result
+    .slice(0, 6)
+    .map((event) => <LimitedInfoCard key={event.event_id} {...event} />);
 
   return (
     <div className={styles.upcomingLL2}>

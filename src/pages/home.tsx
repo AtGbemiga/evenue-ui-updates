@@ -33,7 +33,6 @@ const Home = () => {
         category: formDetails.category ?? "",
         setErrMsg,
       });
-      console.log({ res });
 
       setEvents(res);
       setErrMsg("");

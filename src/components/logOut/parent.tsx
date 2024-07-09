@@ -7,8 +7,10 @@ import styles from "./styles/parentXJ2.module.css";
 
 export const Parent = ({
   setTokenState,
+  autoCloseNavMobile,
 }: {
   setTokenState: React.Dispatch<React.SetStateAction<boolean>>;
+  autoCloseNavMobile: () => void;
 }) => {
   const [profileRes, setProfileRes] = useState<ProfileRes>();
   const [errMsg, setErrMsg] = useState("");
@@ -29,6 +31,7 @@ export const Parent = ({
       <LogOut
         firstName={firstName?.[0].first_name || ""}
         setTokenState={setTokenState}
+        autoCloseNavMobile={autoCloseNavMobile}
       />
       {errMsg && <ErrMsg errMsg={errMsg} />}
     </div>

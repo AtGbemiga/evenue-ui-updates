@@ -10,6 +10,7 @@ import { InlineErrMsg } from "./inlineErrMsg";
 import { InlineSuccessMsg } from "./inllineSuccessMsg";
 import unLikeFn from "../../lib/shortVideos/unLike";
 import { OneStory } from "../../typesAndInterfaces/stories/res4AllStories";
+import { baseURL } from "../../lib/global/urls";
 interface Props extends LoneVid {
   bigPage?: boolean;
 }

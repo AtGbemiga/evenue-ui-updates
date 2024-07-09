@@ -35,11 +35,12 @@ const Venues = () => {
         rating: formDetails.rating ?? "",
         setErrMsg,
       });
-      console.log({ res });
 
       setVenues(res);
       setErrMsg("");
-    } catch (error) {}
+    } catch (error: any) {
+      setErrMsg(error.error);
+    }
   }
 
   const content = venues?.result?.map((venue) => (

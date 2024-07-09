@@ -26,7 +26,7 @@ export const DefaultBody = () => {
       <section>
         <VenueOrEventAd
           props="Find the, BEST, VENUE, for your, Events "
-          body="Lorem ipsum dolor sit amet consectetur. Velit viverra rhoncus pharetra in ut sit."
+          body="Planning an event can be a daunting task, but finding the perfect venue shouldn't be. At E-Venue, we make it simple to discover, compare, and book the ideal location for any occasion."
           toAttr="venues"
         />
       </section>

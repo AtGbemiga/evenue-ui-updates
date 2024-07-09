@@ -24,6 +24,7 @@ export const ShowAdminEventsCategories = () => {
   const conference = resCategories?.result.find(
     (state) => state.Conference
   )?.Conference;
+  const party = resCategories?.result.find((state) => state.Party)?.Party;
 
   return (
     <div className={styles.parent29C}>
@@ -31,7 +32,12 @@ export const ShowAdminEventsCategories = () => {
         <ErrMsg errMsg={errMsg} />
       ) : (
         <>
-          <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <h2>Popular Event Categories by eVenue</h2>
             <Link to={`/event-centres/full-list`}>See more</Link>
           </div>
@@ -52,6 +58,12 @@ export const ShowAdminEventsCategories = () => {
               <div>
                 <h3>Conference</h3>
                 <p>{conference} venues</p>
+              </div>
+            </Link>
+            <Link to={`/event/ev/party`}>
+              <div>
+                <h3>Party</h3>
+                <p>{party} venues</p>
               </div>
             </Link>
           </section>

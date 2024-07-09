@@ -20,6 +20,9 @@ export const ShowCategories = () => {
   )?.Meetings;
   const shows = resCategories?.result.find((state) => state.Shows)?.Shows;
   const others = resCategories?.result.find((state) => state.Others)?.Others;
+  const awardShows = resCategories?.result.find(
+    (state) => state.Award_show
+  )?.Award_show;
 
   return (
     <div className={styles.parent29C}>
@@ -27,7 +30,12 @@ export const ShowCategories = () => {
         <ErrMsg errMsg={errMsg} />
       ) : (
         <>
-          <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <h2>Popular Event Centres Categories</h2>
             <Link to={`/centres-categories/full-list`}>See more</Link>
           </div>
@@ -43,6 +51,12 @@ export const ShowCategories = () => {
               <div>
                 <h3>Shows</h3>
                 <p>{shows} venues</p>
+              </div>
+            </Link>
+            <Link to={`/venues/ci/award_show`}>
+              <div>
+                <h3>Award Show</h3>
+                <p>{awardShows} venues</p>
               </div>
             </Link>
             <Link to={`/venues/ci/others`}>

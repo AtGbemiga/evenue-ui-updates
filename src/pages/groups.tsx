@@ -23,7 +23,7 @@ export const Groups = () => {
         group_name,
         setErrMsg,
       });
-      console.log({ res });
+
       res && setResGroups(res);
       setErrMsg("");
     } catch (error) {}

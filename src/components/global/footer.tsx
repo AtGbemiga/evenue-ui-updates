@@ -6,12 +6,12 @@ const Footer = () => {
     <div className={styles.footerMR6}>
       <div>
         <h6>About</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Ullamcorper bibendum diam
-          sapien faucibus. Dolor in nibh malesuada pharetra aenean eu rhoncus.
-          Non tortor sagittis metus vitae nunc. Varius congue faucibus lacus
-          pharetra nisl risus. Bibendum integer fringilla id ante fusce varius
-          eget.
+        <p style={{ color: "#f8f8f8" }}>
+          Welcome to E-Venue, your ultimate platform for connecting people with
+          perfect event venues and unforgettable experiences. Whether you're
+          looking to list your event center, book a venue for your special
+          occasion, promote your upcoming event, or purchase tickets for an
+          event, we have you covered.
         </p>
         <Link to="/about">Learn more</Link> {/* placeholder to attribute */}
       </div>
@@ -31,64 +31,34 @@ const Footer = () => {
           <Link to="/privacy">Privacy</Link>
         </p>
         <p>
-          <Link to="/about">About</Link>
-        </p>
-        <p>
-          <Link to="/contact">Contact</Link>
-        </p>
-        <p>
-          <Link to="/terms">Terms</Link>
-        </p>
-        <p>
-          <Link to="/privacy">Privacy</Link>
-        </p>
-        <p>
-          <Link to="/privacy">Privacy</Link>
+          <Link to="/admin">Admin</Link>
         </p>
       </div>
       <div>
-        <p>
+        {/* <p>
           <Link to="/contact">Contact</Link>
         </p>
         <p>
           <Link to="/terms">Terms</Link>
-        </p>
-        <p>
-          <Link to="/privacy">Privacy</Link>
-        </p>
-        <p>
-          <Link to="/privacy">Privacy</Link>
-        </p>
+        </p> */}
       </div>
       <div>
         <h6>Follow</h6>
         <div>
           <Link to="/contact">
-            <img
-              src="/home/ic_baseline-facebook.svg"
-              alt="facebook"
-            />
+            <img src="/home/ic_baseline-facebook.svg" alt="facebook" />
           </Link>
 
           <Link to="/contact">
-            <img
-              src="/home/Vector.svg"
-              alt="ig"
-            />
+            <img src="/home/Vector.svg" alt="ig" />
           </Link>
 
           <Link to="/contact">
-            <img
-              src="/home/mdi_linkedin.svg"
-              alt="linkedin"
-            />
+            <img src="/home/mdi_linkedin.svg" alt="linkedin" />
           </Link>
 
           <Link to="/contact">
-            <img
-              src="/home/ph_x-fill.svg"
-              alt="x"
-            />
+            <img src="/home/ph_x-fill.svg" alt="x" />
           </Link>
         </div>
       </div>
