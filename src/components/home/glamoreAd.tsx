@@ -8,6 +8,7 @@ export interface Welcome67 {
 }
 
 export interface Result {
+  id: number;
   img: string;
   url: string;
 }

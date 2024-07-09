@@ -58,6 +58,7 @@ import SignUp from "./pages/signUp";
 import Ticketing from "./pages/ticketing";
 import Venues from "./pages/venues";
 import { HomeAdvert } from "./components/admin/HomeAdvert";
+import { DeleteHomeAdvert } from "./components/admin/DeleteHomeAd";
 
 function App() {
   const [tokenState, setTokenState] = useState(
@@ -179,6 +180,10 @@ function App() {
           element={<GroupPostCommentListInAdmin />}
         />
         <Route path="/admin/home-advert" element={<HomeAdvert />} />
+        <Route
+          path="/admin/delete-home-advert"
+          element={<DeleteHomeAdvert />}
+        />
       </Route>
     )
   );

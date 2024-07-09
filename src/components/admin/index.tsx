@@ -55,6 +55,9 @@ export const AdminIndex = () => {
         <li>
           <Link to={`/admin/home-advert`}>Home page advert</Link>
         </li>
+        <li>
+          <Link to={`/admin/delete-home-advert`}>Delete home page advert</Link>
+        </li>
       </ol>
     </div>
   );
