@@ -30,6 +30,9 @@ const Footer = () => {
         <p>
           <Link to="/privacy">Privacy</Link>
         </p>
+        <p>
+          <Link to="/admin">Admin</Link>
+        </p>
       </div>
       <div>
         {/* <p>
