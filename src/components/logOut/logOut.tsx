@@ -25,7 +25,9 @@ export const LogOut = ({
   return (
     <>
       <p>Hi {firstName}</p>
-      <Link to="/profile">{firstName.substring(0, 1)}</Link>
+      <Link to="/profile" style={{ padding: "0 0.5rem", marginLeft: "0.5rem" }}>
+        {firstName.substring(0, 1)}
+      </Link>
       <button onClick={handleLogOut}>Log out</button>
       {errMsg && <InlineErrMsg errMsg={errMsg} />}
     </>
