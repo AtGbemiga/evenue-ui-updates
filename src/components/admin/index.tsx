@@ -2,11 +2,17 @@ import { useEffect, useState } from "react";
 import checkIsAdminFn from "../../lib/admin/checkIsAdmin";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import Cookies from "js-cookie";
 
 export const AdminIndex = () => {
   const [errMsg, setErrMsg] = useState("");
   const navigator = useNavigate();
   useEffect(() => {
+    const token = Cookies.get("token");
+
+    if (!token) {
+      navigator("/");
+    }
     (async () => {
       const res = await checkIsAdminFn({ setErrMsg });
 
