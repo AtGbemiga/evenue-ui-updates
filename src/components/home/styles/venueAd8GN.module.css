@@ -1,6 +1,5 @@
 .container8GN {
   width: 100%;
-  /* margin: 4rem 0; */
 }
 
 .venueAd8GN {
@@ -96,14 +95,19 @@
     width: 80%;
     height: 15rem;
     border-radius: 0.5rem;
+    border: 1px solid red;
   }
   .venueAd8GN h4 {
+    display: flex;
+    justify-content: center;
+    word-wrap: wrap;
     font-size: 1rem;
-
     font-weight: 500;
-
     top: 20%;
     left: 5%;
+  }
+  .venueAd8GN h4 span {
+    display: flex;
   }
   .venueAd8GN span:first-of-type,
   .venueAd8GN span:last-of-type {
@@ -117,5 +121,9 @@
   .venueAd8GN p {
     width: 100%;
     height: fit-content;
+    font-size: 1rem;
+    word-wrap: wrap;
+    margin: 0;
+    padding: 0%;
   }
 }
